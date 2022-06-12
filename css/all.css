@@ -1,0 +1,272 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* CSS reset end */
+
+/* 全域設定 */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Noto Sans CJK TC", "Noto Sans TC", "Microsoft JhengHei", "PingFang", "STHeiti", sans-serif, serif;
+}
+.hex{
+    color: #56C4C5;
+}
+
+/* PC 版 */
+.container{
+    max-width: 1088px;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+/* navbar 開始 */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+nav .home{
+    padding: 24px 0px;
+}
+nav img{
+    width: 218px;
+    height: 40px;
+}
+nav .pay{
+    display: block;
+    background: #FF5D50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 8px 32px;
+    border-radius: 22px;
+    text-decoration: none;
+}
+nav .pay:hover{
+    background: #56C4C5;
+    color: #221E1F;
+}
+/* navbar 結束 */
+
+/* header 開始 */
+header{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 117px;
+}
+header .banner-txt{
+    width: 42%;
+    margin-right: 102px;
+    line-height: 1.5;
+}
+header h2{
+    font-size: 18px;
+    font-weight: bold;
+}
+header .role{
+    font-size: 48px;
+    font-weight: bold;
+}
+header .solutions{
+    font-size: 20px;
+}
+header img{
+    width: 48%;
+}
+/* header 結束 */
+
+/* main 開始*/
+main{
+    margin-bottom: 100px;
+}
+.platform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.platform h2{
+    color:#221E1F;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+.platform-list{
+    display: flex;
+    justify-content: space-around;
+}
+.platform-item{
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 54px;
+}
+.platform-item img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 24px;
+}
+.platform-item h3{
+    color: #221E1F;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+    white-space: nowrap;
+}
+.platform-item p{
+    color: #747474;
+    text-align: center;
+}
+
+.situation{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.situation h2{
+    color:#221E1F;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.situation span{
+    display: block;
+    color: #221E1F;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.situation-list{
+    display: flex;
+    justify-content: space-between;
+}
+.situation-item{
+    width: 260px;
+    line-height: 1.5;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+.situation-item img{
+    border-radius: 12px 12px 0px 0px; 
+}
+.situation-item h3{
+    font-weight: bold;
+    margin: 16px 0px;
+}
+.situation-item p{
+    margin-bottom: 24px;
+}
+
+/* main 結束*/
+
+/* footer 開始*/
+footer .footer-plan{
+    background: url(../images/footer_bg.png) no-repeat center/cover;
+    padding: 260px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer h3{
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+footer a{
+    background: #56C4C5;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 12px 32px;
+    text-decoration: none;
+    border-radius: 27px;
+    border: 1px solid #56C4C5; 
+}
+footer p{
+  background: #F5F5F5;
+  text-align: center;
+  padding: 16px 0px;
+}
+/* footer 結束*/
+/* index.html 結束 */
+
+/* price-plan.html 開始 */
+
+.container .build{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.container .building{
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: blue;
+    margin-top: 20px;
+}
+
+/* price-plan.html 結束 */
