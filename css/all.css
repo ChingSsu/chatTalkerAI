@@ -63,12 +63,49 @@ body {
 .hex{
     color: #56C4C5;
 }
-
+.mr47{
+    margin-right: 47px;
+}
 /* PC 版 */
+
+.wrap{
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.bg-block{
+    background-image: url(../images/bg_yellow.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 851px;
+    height: 768px;
+    top: 0px;
+    right: 0px;
+    z-index: -10;
+}
+.bg-ball1{
+    position: absolute;
+    background-image: url(../images/ball01.svg);
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 360px;
+    top: 589px;
+    left: -222px;
+    z-index: -10;
+}
+.top-btn{
+    background-image: url(../images/top.svg);
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 71px;
+    height: 71px;
+    right: 48px;
+    bottom: 23px;
+    z-index: 100;
+}
 .container{
     max-width: 1088px;
     margin: 0 auto;
-    background: #FFFFFF;
 }
 
 /* navbar 開始 */
@@ -104,12 +141,12 @@ nav .pay:hover{
 header{
     display: flex;
     justify-content: space-between;
-    justify-content: center;
     align-items: center;
     margin-bottom: 117px;
 }
 header .banner-txt{
-    width: 42%;
+    display: block;
+    width: 451px;
     margin-right: 102px;
     line-height: 1.5;
 }
@@ -125,7 +162,8 @@ header .solutions{
     font-size: 20px;
 }
 header img{
-    width: 48%;
+    width: 532px;
+    height: 534px;
 }
 /* header 結束 */
 
@@ -184,14 +222,12 @@ main{
     color:#221E1F;
     font-size: 32px;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 16px;
 }
 .situation span{
     display: block;
     color: #221E1F;
     font-size: 20px;
-    text-align: center;
     margin-bottom: 48px;
 }
 .situation-list{
@@ -216,7 +252,124 @@ main{
 .situation-item p{
     margin-bottom: 24px;
 }
-
+.feature{
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    line-height: 1.5;
+}
+.feature-list{
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.feature-item{
+    width: 230px;
+    margin-bottom: 28px;
+    padding: 32px 32px 48px 32px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+.feature-item h3{
+    color: #221E1F;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.feature-item p{
+    color: #221E1F;
+}
+.feature-txt{
+    width: 53%;
+    align-self: center;
+    padding: 0px 49px 0px 135px;
+}
+.feature-txt h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.feature-txt p{
+    color: #221E1F;
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+.feature-txt a{
+    display: inline-block;
+    background: #56C4C5;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 12px 32px;
+    text-decoration: none;
+    border-radius: 27px;
+    border: 1px solid #56C4C5; 
+}
+.comment{ 
+    background: #FFFFFF;
+    margin-bottom: 100px;
+}
+.comment h2{
+    color:#221E1F;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 104px;
+}
+.comment-list{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 24px;
+}
+.comment-card{
+    width: 352px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-right: 16px;
+    padding: 48px 32px 24px 32px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+}
+.card-content strong{
+    font-weight: bold;
+}
+.card-content hr{
+    border: 1px solid #DDDDDD;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-card>img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: -50px;
+    position: absolute;
+}
+.card-star{
+    display: flex;
+    justify-content: space-between;
+}
+.card-star img{
+    padding-right: 4.23px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    padding: 5px;
+    margin-right: 8px;
+    border-radius: 5px;
+    background: #DDDDDD;
+}
+.dot2{
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: #FFD153;
+}
 /* main 結束*/
 
 /* footer 開始*/
@@ -249,6 +402,234 @@ footer p{
   padding: 16px 0px;
 }
 /* footer 結束*/
+
+@media (max-width: 767px) {
+    .bg-block {
+        background-image: none;
+    }
+    .bg-ball1{
+        background-position: -60px -25px;
+        top: 890px;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 199;
+        border-bottom: 2px solid #FFD153;
+        background-color: #FFFFFF;
+        padding: 16px 20px;
+    }
+    header{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    header .banner-txt{
+        margin-top: 150px;
+        margin-left: 20px;
+        margin-bottom: 32px;
+    }
+    header img{
+        background-image: url(../images/bg_home_sm.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 90%;
+        background-size: 100%;
+        margin-left: 20px;
+        width: 94%;
+    }
+    .platform-list{
+        width: 100%;
+    }
+    .platform-item{
+        margin: 0px 3px;
+    }
+    .platform-item h3{
+        font-size: 20px;
+    }
+    .situation{
+        margin-bottom: 76px;
+    }
+    .situation-list{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .situation-item{
+        margin-bottom: 24px;
+    }
+    .feature{
+        flex-direction: column-reverse;
+    }
+    .feature-list{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .feature-item{
+        padding: 32px 41px 48px 24px;
+    }
+    .feature-txt{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .comment{
+        padding: 0 20px;
+    }
+    .comment-list .mr{
+        margin-right: 0px;
+    }
+    .card-content .mb{
+        margin-bottom: 32px;
+    }
+    .card-footer{
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+    .card-footer p{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .bg-block {
+        background-image: url(../images/bg_home_sm.svg);
+        width: 304px;
+        height: 305px;
+        top: 391px;
+        right: 20px;
+    }
+    .bg-ball1{
+        width: 49px;
+        height: 126px;
+        top: 743px;
+        left: -77px;
+    }
+    .top-btn{
+        right: 16px;
+        bottom: 16px;
+    }
+    .container{
+        padding: 0 20px;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 199;
+        border-bottom: 2px solid #FFD153;
+        background-color: white;
+        padding: 16px 20px;
+    }
+    nav img{
+        width: 131px;
+        height: 24px;
+    }
+    header{
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    header .banner-txt{
+        width: 100%;
+        margin: 134px 0px 32px 0px;
+    }
+    header h2{
+        font-size: 16px;
+    }
+    header .role{
+        font-size: 32px;
+    }
+    header .solutions{
+        font-size: 16px;
+    }
+    header img{
+        width: 304px;
+        height: 305px;
+    }
+    .platform{
+        margin-bottom: 60px;
+    }
+    .platform h2{
+        font-size: 28px;
+    }
+    .platform-list{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .platform-item{
+        margin: 0px 20px 24px 20px;
+    }
+    .platform-item h3{
+        font-size: 18px;
+    }
+    .situation{
+        margin-bottom: 60px;
+    }
+    .situation h2{
+        font-size: 28px;
+    }
+    .situation span{
+        font-size: 18px;
+    }
+    .situation-list{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 37px 0 38px;
+    }
+    .situation-item{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .feature{
+        flex-direction: column-reverse;
+        margin-bottom: 60px;
+    }
+    .feature-list{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 53px 0 52px;
+    }
+    .feature-item{
+        width: 100%;
+        padding: 32px 41px 48px 24px;
+    }
+    .feature-txt{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .feature-txt h2{
+        font-size: 28px;
+    }
+    .feature-txt p{
+        font-size: 16px;
+    }
+    .comment{
+        margin-bottom: 60px;
+    }
+    .comment h2{
+        margin-bottom: 88px;
+    }
+    .comment-list{
+        width: 100%;
+        flex-direction: column;
+    }
+    .comment-card{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 80px;
+        padding: 0px 17px 16px 16px;
+    }
+    .comment-card>img{
+        top: -40px;
+        position: relative;
+    }
+    footer h3{
+        font-size: 24px;
+    }
+}
+
 /* index.html 結束 */
 
 /* price-plan.html 開始 */
